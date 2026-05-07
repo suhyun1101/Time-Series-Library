@@ -1,0 +1,2 @@
+phase,experiment_id,model,dataset,seq_len,label_len,pred_len,condition,method,device,mse,mae,early_stop_epoch,status,note
+1,phase1_001,TimesNet,ETTh1,96,48,96,clean,base,CPU,0.3886759281,0.4117767513,7,done,clean baseline reproduced
