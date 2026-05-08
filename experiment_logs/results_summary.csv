@@ -1,2 +1,9 @@
 phase,experiment_id,model,dataset,seq_len,label_len,pred_len,condition,method,device,mse,mae,early_stop_epoch,status,note
 1,phase1_001,TimesNet,ETTh1,96,48,96,clean,base,CPU,0.3886759281,0.4117767513,7,done,clean baseline reproduced
+2,phase2_eval_001,TimesNet,ETTh1,96,48,96,clean,base_corrupted_eval,CPU,0.388676,0.411777,,done,clean evaluation using Phase 1 checkpoint
+2,phase2_eval_002,TimesNet,ETTh1,96,48,96,continuous_input_only,base_corrupted_eval,CPU,0.389327,0.412324,,done,input-only continuous perturbation
+2,phase2_eval_003,TimesNet,ETTh1,96,48,96,gaussian_pointwise_input_only,base_corrupted_eval,CPU,0.390497,0.413033,,done,input-only gaussian pointwise noise
+2,phase2_eval_004,TimesNet,ETTh1,96,48,96,missing_observation_input_only,base_corrupted_eval,CPU,0.391175,0.413599,,done,input-only missing observation
+2,phase2_eval_005,TimesNet,ETTh1,96,48,96,pointwise_spike_input_only,base_corrupted_eval,CPU,0.447148,0.445215,,done,input-only pointwise spike
+2,phase2_eval_006,TimesNet,ETTh1,96,48,96,level_shift_input_output,base_corrupted_eval,CPU,0.615161,0.551453,,done,input-output level shift
+2,phase2_eval_007,TimesNet,ETTh1,96,48,96,variance_burst_input_output,base_corrupted_eval,CPU,1.552697,0.819610,,done,input-output variance burst
