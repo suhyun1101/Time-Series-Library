@@ -28,7 +28,7 @@ The original codebase is preserved as much as possible, and project-specific imp
 | Phase | Goal | Status |
 |---|---|---|
 | Phase 1 | Environment setup and clean baseline reproduction | Done |
-| Phase 2 | Anomaly augmentation implementation | Not started |
+| Phase 2 | Anomaly augmentation implementation | Done |
 | Phase 3 | Co-TSFA-style baseline implementation | Not started |
 | Phase 4 | Shape-conditioned proposed method | Not started |
 | Phase 5 | Ablation studies and paper writing | Not started |
@@ -56,19 +56,31 @@ Detailed logs are stored in:
 
 ---
 
-## Phase 2 Plan
+## Phase 2 Summary
 
-Phase 2 will implement anomaly augmentation methods.
+Phase 2 implemented anomaly augmentation functions and evaluated the clean TimesNet checkpoint under corrupted test conditions.
 
-Planned anomaly types:
+Implemented anomaly types:
 
-1. Continuous perturbation
-2. Gaussian pointwise noise
-3. Missing observation
-4. Pointwise spike
-5. Level shift
-6. Variance burst
+- Continuous perturbation
+- Gaussian pointwise noise
+- Missing observation
+- Pointwise spike
+- Level shift
+- Variance burst
 
-Each augmentation will be checked visually before being connected to the training pipeline.
+The corrupted evaluation showed that small input-only perturbations caused minor degradation, while input-output anomalies such as level shift and variance burst caused much larger performance drops.
 
-The first implementation target is to create independent augmentation functions and visualize their effects on ETTh1 samples.
+Key corrupted evaluation results:
+
+| Condition | MSE | MAE |
+|---|---:|---:|
+| clean | 0.388676 | 0.411777 |
+| continuous_input_only | 0.389327 | 0.412324 |
+| gaussian_pointwise_input_only | 0.390497 | 0.413033 |
+| missing_observation_input_only | 0.391175 | 0.413599 |
+| pointwise_spike_input_only | 0.447148 | 0.445215 |
+| level_shift_input_output | 0.615161 | 0.551453 |
+| variance_burst_input_output | 1.552697 | 0.819610 |
+
+Phase 2 is considered complete.
