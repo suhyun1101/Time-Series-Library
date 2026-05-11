@@ -29,7 +29,7 @@ The original codebase is preserved as much as possible, and project-specific imp
 |---|---|---|
 | Phase 1 | Environment setup and clean baseline reproduction | Done |
 | Phase 2 | Anomaly augmentation implementation | Done |
-| Phase 3 | Co-TSFA-style baseline implementation | Not started |
+| Phase 3 | Co-TSFA-style baseline implementation | In progress |
 | Phase 4 | Shape-conditioned proposed method | Not started |
 | Phase 5 | Ablation studies and paper writing | Not started |
 
@@ -84,3 +84,16 @@ Key corrupted evaluation results:
 | variance_burst_input_output | 1.552697 | 0.819610 |
 
 Phase 2 is considered complete.
+
+## Phase 3 Progress
+
+Phase 3 started with the implementation of a Co-TSFA-style alignment loss.
+
+The alignment loss compares the similarity between original and augmented latent representations with the similarity between original and augmented forecasting targets.
+
+Initial toy checks showed that the loss behaves as expected:
+
+- Input-only case: output similarity is close to 1 and the alignment loss is near 0.
+- Input-output changed case: output similarity decreases and the alignment loss increases.
+
+The next step is to modify TimesNet to return latent representations for Co-TSFA-style training.
