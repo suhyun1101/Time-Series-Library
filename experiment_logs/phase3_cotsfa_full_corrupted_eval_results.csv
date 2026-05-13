@@ -1,0 +1,8 @@
+condition,model,dataset,seq_len,label_len,pred_len,mse,mae,checkpoint,training_setting
+clean,CoTSFATimesNet,ETTh1,96,48,96,0.4320553243160248,0.429688036441803,C:\Users\cecil\Projects\Time-Series-Library\checkpoints_cotsfa\cotsfa_etth1_96_full\checkpoint.pth,full_10epochs_best_epoch9_lambda0.1
+continuous_input_only,CoTSFATimesNet,ETTh1,96,48,96,0.4331561326980591,0.43043622374534607,C:\Users\cecil\Projects\Time-Series-Library\checkpoints_cotsfa\cotsfa_etth1_96_full\checkpoint.pth,full_10epochs_best_epoch9_lambda0.1
+gaussian_pointwise_input_only,CoTSFATimesNet,ETTh1,96,48,96,0.4377426207065582,0.43233948945999146,C:\Users\cecil\Projects\Time-Series-Library\checkpoints_cotsfa\cotsfa_etth1_96_full\checkpoint.pth,full_10epochs_best_epoch9_lambda0.1
+missing_observation_input_only,CoTSFATimesNet,ETTh1,96,48,96,0.42435309290885925,0.4270195960998535,C:\Users\cecil\Projects\Time-Series-Library\checkpoints_cotsfa\cotsfa_etth1_96_full\checkpoint.pth,full_10epochs_best_epoch9_lambda0.1
+pointwise_spike_input_only,CoTSFATimesNet,ETTh1,96,48,96,0.5630611777305603,0.48839759826660156,C:\Users\cecil\Projects\Time-Series-Library\checkpoints_cotsfa\cotsfa_etth1_96_full\checkpoint.pth,full_10epochs_best_epoch9_lambda0.1
+level_shift_input_output,CoTSFATimesNet,ETTh1,96,48,96,0.5745025277137756,0.5179499983787537,C:\Users\cecil\Projects\Time-Series-Library\checkpoints_cotsfa\cotsfa_etth1_96_full\checkpoint.pth,full_10epochs_best_epoch9_lambda0.1
+variance_burst_input_output,CoTSFATimesNet,ETTh1,96,48,96,1.5452772378921509,0.8230167627334595,C:\Users\cecil\Projects\Time-Series-Library\checkpoints_cotsfa\cotsfa_etth1_96_full\checkpoint.pth,full_10epochs_best_epoch9_lambda0.1
